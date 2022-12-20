@@ -180,12 +180,8 @@ struct TooltipModifier<TooltipContent: View>: ViewModifier {
                 RoundedRectangle(cornerRadius: config.borderRadius)
                     .stroke(config.borderWidth == 0 ? Color.clear : config.borderColor)
                     .frame(
-                        minWidth: contentWidth,
-                        idealWidth: contentWidth,
-                        maxWidth: config.width,
-                        minHeight: contentHeight,
-                        idealHeight: contentHeight,
-                        maxHeight: config.height
+                        width: contentWidth,
+                        height: contentHeight
                     )
                     .background(
                         RoundedRectangle(cornerRadius: config.borderRadius)
